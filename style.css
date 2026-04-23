@@ -221,13 +221,13 @@ nav .navigation ul li a:hover
 
 
 /*------------- Courses section styling  ------------*/
-#course
+#games
 {
 	padding: 8vw 8vw 8vw 8vw;
 	text-align: center;
 }
 
-#course .course-box
+#games .game-box
 {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -235,7 +235,7 @@ nav .navigation ul li a:hover
 	margin-top: 50px;
 }
 
-#course .courses
+#games .games
 {
 	text-align: start;
 	background: #edf1f2;
@@ -243,7 +243,7 @@ nav .navigation ul li a:hover
 	position: relative;
 }
 
-#course .courses img
+#games .games img
 {
 	width: 100%;
 	height: 60%;
@@ -251,18 +251,18 @@ nav .navigation ul li a:hover
 	background-position: center;
 }
 
-#course .courses .details
+#games .games .details
 {
 	padding: 15px 15px 0 15px;
 }
 
-#course .courses .details i
+#games .games .details i
 {
 	color: #fdc93b;
 	font-size: .9rem;
 }
 
-#course .courses .cost
+#games .games .cost
 {
 	background-color: rgb(74, 74, 136);
 	color: #fff;
