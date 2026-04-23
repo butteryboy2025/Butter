@@ -18,7 +18,34 @@
       font-weight: bold;
     }
   </style>
+    <!-- GN-Math -->
+<style>
+    html,  body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
 
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000000;
+      color: #ffffff !important;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none !important;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .button:hover {
+      background-color: #4a148c !important;
+    }
+  </style>
 
     <!-- Fonts -->
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -42,6 +69,32 @@
     </nav>
     <section id="home">
       <h3>Add Games here</h3>
+    </section>
+    <section id="games">
+      <a id="button" class="button" >Launch</a>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const button = document.getElementById('button');
+      button.addEventListener('click', launch);
+    });
+
+    function launch() {
+      try {
+        fetch("https://cdn.jsdelivr.net/gh/gn-math/gn-math.github.io@main/singlefile.html?t="+Date.now())
+          .then(response => response.text())
+          .then(text => {
+            const newWin = window.open("about:blank", "_blank");
+            if (newWin) {
+              newWin.document.open();
+              newWin.document.write(text);
+              newWin.document.close();
+            }
+          });
+      } catch (error) {
+        console.error('error:', error);
+      }
+    }
+  </script>
     </section>
   </body>
 </html>
