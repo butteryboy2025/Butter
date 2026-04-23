@@ -23,5 +23,40 @@
         </ul>
       </div>
     </nav>
+    <section id="home">
+      <style>
+        input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }  
+        li.hidden {
+      display: none;
+    }
+         .search-container {
+      max-width: 400px;
+      margin: auto;
+    }
+      </style>
+      <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search...">
+      </div>
+      <script>
+  const searchInput = document.getElementById('searchInput');
+  const items = document.querySelectorAll('#itemList li');
+
+  searchInput.addEventListener('keyup', function () {
+    const query = this.value.toLowerCase();
+
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.classList.toggle('hidden', !text.includes(query));
+    });
+  });
+</script>
+
+       
     
   </body>
