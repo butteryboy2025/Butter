@@ -19,33 +19,7 @@
     }
   </style>
     <!-- GN-Math -->
-<style>
-    html,  body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
 
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100vw;
-      height: 100vh;
-      background-color: #000000;
-      color: #ffffff !important;
-      font-family: Arial, sans-serif;
-      font-size: 24px;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none !important;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    .button:hover {
-      background-color: #4a148c !important;
-    }
-  </style>
 
     <!-- Fonts -->
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
@@ -72,30 +46,19 @@
     </section>
     <!-- Games Section -->
     <section id="games">
-      <a id="button" class="button" >Launch</a>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const button = document.getElementById('button');
-      button.addEventListener('click', launch);
-    });
-
-    function launch() {
-      try {
-        fetch("https://cdn.jsdelivr.net/gh/freebuisness/freebuisness.github.io@main/singlefile.html"+Date.now())
-          .then(response => response.text())
-          .then(text => {
-            const newWin = window.open("about:blank", "_blank");
-            if (newWin) {
-              newWin.document.open();
-              newWin.document.write(text);
-              newWin.document.close();
-            }
-          });
-      } catch (error) {
-        console.error('error:', error);
-      }
-    }
-  </script>
+      <a href="javascript:(async()=>{
+           const text = `<script>fetch('https://cdn.jsdelivr.net/gh/gn-math/gn-math-DONTDMCA@main/singlefile.html?t='+Date.now()).then(t=>t.text()).then(t=>{document.documentElement.innerHTML=t,document.querySelectorAll('script').forEach(t=>{let e=document.createElement('script');t.src?e.src=t.src:e.textContent=t.textContent,document.body.appendChild(e)})})</script>`;
+           const parser = new DOMParser();
+           const doc = parser.parseFromString(text, 'text/html');
+           const html = window.parent.document;
+           html.documentElement.innerHTML = doc.documentElement.innerHTML;
+           doc.querySelectorAll('script').forEach(s => {
+           const ns = html.createElement('script');
+           if (s.src) ns.src = s.src;
+           else ns.textContent = s.textContent;
+           html.body.appendChild(ns);
+           });
+           })()">Website</a>
     </section>
   </body>
 </html>
