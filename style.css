@@ -426,7 +426,7 @@ nav .navigation ul li a:hover
 /*------------- Footer section styling  ------------*/
 footer
 {
-	padding: 8vw;
+	padding: 4vw;
 	background-color: #101c32;
 	display: flex;
 	justify-content: space-between;
