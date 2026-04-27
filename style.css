@@ -30,12 +30,7 @@ h6
 	color: rgb(24, 24, 49);
 }
 
-h3
-{
-	font-size: 2.5rem;
-	font-weight: 700;
-	color: rgb(114,160,193);
-}
+
 /*------------- Navigation style ------------*/
 nav
 {
@@ -131,7 +126,7 @@ nav .navigation ul li a:hover
 #home h3
 {
 	font-size: 1.8rem;
-	color: rgb(114,160,193);
+	color: rgb(0,45,135);
 }
 #home p
 {
