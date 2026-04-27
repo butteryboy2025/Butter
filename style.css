@@ -30,7 +30,12 @@ h6
 	color: rgb(24, 24, 49);
 }
 
-
+h3
+{
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: rgb(114,160,193);
+}
 /*------------- Navigation style ------------*/
 nav
 {
